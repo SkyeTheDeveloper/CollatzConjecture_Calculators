@@ -1,39 +1,35 @@
+import java.math.BigInteger;
+
 fun main() {
     clear();
-    var collatz = 0uL;
+    var collatz = BigInteger.ZERO;
     var peak = collatz;
     var steps = 0;
     val collatzFile = "CollatzFile.txt";
     
     do {
         print("What number would you like to run through the Collatz Conjecture: ");
-        collatz = readln().toULong();
-        if (collatz != 1uL) {
-            if (collatz < 1uL) {
-                collatz = 0uL
+        collatz = readln().toBigInteger();
+        if (collatz != BigInteger.ONE) {
+            if (collatz < BigInteger.ONE) {
+                collatz = BigInteger.ZERO
                 println("The Collatz Conjecture has strange and emergent behavior with numbers less than 1");
             } else {
                 break;
             }
         }
-    } while (collatz < 0uL);
+    } while (collatz < BigInteger.ONE);
     val start = collatz;
     peak = collatz;
     writeToFile(collatzFile, "Start: $start\n", false);
     
-    while (collatz > 1uL) {
-        if (collatz % 2uL == 0uL) {
-            collatz /= 2uL;
+    while (collatz > BigInteger.ONE) {
+        if (collatz % BigInteger.TWO == BigInteger.ZERO) {
+            collatz /= BigInteger.TWO;
         } else {
-            if (collatz > (ULong.MAX_VALUE - 1uL) / 3uL) {
-                println("$start overflowed on step ${++steps}\nExiting...");
-                writeToFile(collatzFile, "$start overflowed on step $steps\nProgram exited with error: ULong Integer Overflow", true);
-                kotlin.system.exitProcess(1);
-            } else {
-                collatz = collatz * 3uL + 1uL;
-                if (collatz > peak) {
-                    peak = collatz;
-                }
+            collatz = collatz * (BigInteger.TWO + BigInteger.ONE) + BigInteger.ONE;
+            if (collatz > peak) {
+                peak = collatz;
             }
         }
         writeToFile(collatzFile, "Step ${++steps}: $collatz \n", true);
