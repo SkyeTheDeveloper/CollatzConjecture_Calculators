@@ -1,0 +1,14 @@
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.AssemblyInfoInputs.cache
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.AssemblyInfo.cs
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.csproj.CoreCompileInputs.cache
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/bin/Debug/net10.0/CSharp-Implementation
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/bin/Debug/net10.0/CSharp-Implementation.deps.json
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/bin/Debug/net10.0/CSharp-Implementation.runtimeconfig.json
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/bin/Debug/net10.0/CSharp-Implementation.dll
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/bin/Debug/net10.0/CSharp-Implementation.pdb
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.dll
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/refint/CSharp-Implementation.dll
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.pdb
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/CSharp-Implementation.genruntimeconfig.cache
+/Users/29brown/Documents/OpenSourceDevelopment/C/CollatzCalculator/CSharp-Implementation/obj/Debug/net10.0/ref/CSharp-Implementation.dll
