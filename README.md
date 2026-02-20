@@ -6,24 +6,23 @@ The second is using arbitrary precision to store numbers, and since they fill up
 
 
 ## Languages used (grouped by 64-bit or Arbitrary Precision integers)
-64-bit Precision:
-C
+64-bit Precision: C
 
-Arbitrary Precision:
-C#
-Go
-Java
-Kotlin
-Python
-Ruby
+Arbitrary Precision: C#, Go, Java, Kotlin, Python, Ruby
 
 
 
 ## Implementation Style (datatye/library used, oveflow check)
 C: uses native uint64_t datatype to store 64-bit integers, then before 3n+1 steps, checks if that integer could overflow, causing an incorrect output
+
 C#: uses native BigInteger library to store Arbitrary Precision integers, does not require overflow check
+
 Go: uses native math/big library to store Arbitrary Precision integers, does not require overflow check
+
 Java: uses native BigInteger library to store Arbitrary Precision integers, does not require overflow check
+
 Kotlin: uses Java's BigInteger library to store Arbitrary Precision integers, does not require overflow check
+
 Python: uses native int datatype to store Arbitrary Precsion integers, does not require overflow check
+
 Ruby: uses native integer datatype to store Arbitrary Precision integers, does not require overflow check
