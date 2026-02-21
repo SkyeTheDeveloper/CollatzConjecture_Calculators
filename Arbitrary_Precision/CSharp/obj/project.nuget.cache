@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "UjAZ1DQnVbE=",
+  "success": false,
+  "projectFilePath": "/home/skye-the-programmer/Documents/OpenSourceDevelopment/Multilanguage/CollatzConjecture_Calculators/Arbitrary_Precision/CSharp/CollatzCalculator.csproj",
+  "expectedPackageFiles": [
+    "/home/skye-the-programmer/.nuget/packages/microsoft.dotnet.ilcompiler/10.0.2/microsoft.dotnet.ilcompiler.10.0.2.nupkg.sha512",
+    "/home/skye-the-programmer/.nuget/packages/microsoft.net.illink.tasks/10.0.2/microsoft.net.illink.tasks.10.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package runtime.fedora.43-x64.Microsoft.DotNet.ILCompiler. No packages exist with this id in source(s): /usr/lib64/dotnet/library-packs, nuget.org",
+      "projectPath": "/home/skye-the-programmer/Documents/OpenSourceDevelopment/Multilanguage/CollatzConjecture_Calculators/Arbitrary_Precision/CSharp/CollatzCalculator.csproj",
+      "filePath": "/home/skye-the-programmer/Documents/OpenSourceDevelopment/Multilanguage/CollatzConjecture_Calculators/Arbitrary_Precision/CSharp/CollatzCalculator.csproj",
+      "libraryId": "runtime.fedora.43-x64.Microsoft.DotNet.ILCompiler",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
