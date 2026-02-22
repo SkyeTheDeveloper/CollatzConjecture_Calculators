@@ -2,7 +2,7 @@
 
 ## Collatz Conjecture Calculators
 
-Copyright (c) 2026 29brown
+Copyright (c) 2026 Skylar Koningin
 
 This project is licensed under the Apache License, Version 2.0 (the "License").
 You may obtain a copy of the License at:
