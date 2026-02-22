@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CollatzCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+907283528a507d7841add727050c0d52016868dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6124831ef56778ef2b69130f77e9ef2cfa450207")]
 [assembly: System.Reflection.AssemblyProductAttribute("CollatzCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CollatzCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

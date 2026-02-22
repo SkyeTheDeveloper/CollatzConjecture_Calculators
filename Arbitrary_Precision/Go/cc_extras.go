@@ -1,14 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 )
-
-func Clear() {
-	fmt.Print("\033[H\033[2J")
-}
 
 func WriteToFile(filePath string, text string, append bool) {
 	flags := os.O_CREATE | os.O_WRONLY

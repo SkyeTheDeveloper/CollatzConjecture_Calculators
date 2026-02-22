@@ -11,7 +11,7 @@ namespace CollatzCalculator
         static void Main()
         {
             Console.Clear();
-            BigInteger peak, collatz = 0;
+            BigInteger collatz = 0;
             int steps = 0;
             const string collatzFile = "CSharp-CollatzFile.txt";
 
@@ -35,7 +35,8 @@ namespace CollatzCalculator
                     collatz = 0;
                 }
             } while (collatz < 1);
-            BigInteger start = peak = collatz;
+            BigInteger start = collatz;
+            BigInteger peak = start;
             CCExtras.WriteToFile(collatzFile, $"Start: {start}\n", false);
 
             while (collatz > 1)

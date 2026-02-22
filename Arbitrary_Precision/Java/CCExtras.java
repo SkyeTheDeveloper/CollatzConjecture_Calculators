@@ -6,11 +6,6 @@ import java.nio.file.StandardOpenOption;
 
 public class CCExtras {
     
-    public static void clear() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-    
     public static void writeToFile(Path filePath, String text, boolean append) {
         if (append) {
             try {

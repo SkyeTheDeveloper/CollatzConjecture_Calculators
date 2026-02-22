@@ -6,10 +6,11 @@
  class CollatzCalculator {
      
      public static void main(String[] args) {
-         CCExtras.clear();
-         BigInteger collatz, peak; 
+         System.out.print("\033[H\033[2J");
+         System.out.flush();
+         BigInteger collatz; 
          int steps = 0;
-         final Path collatzFile = Paths.get("Java-CollatzFile.txt");
+         final Path COLLATZ_FILE = Paths.get("Java-CollatzFile.txt");
          Scanner input = new Scanner(System.in);
          
          do {
@@ -24,9 +25,10 @@
                  }
              }
          } while (collatz.compareTo(BigInteger.ONE) < 0);
-         final BigInteger start = peak = collatz;
+         final BigInteger START = collatz;
+         BigInteger peak = START;
          input.close();
-         CCExtras.writeToFile(collatzFile, "Start: " + start + "\n", false);
+         CCExtras.writeToFile(COLLATZ_FILE, "Start: " + START + "\n", false);
          
          while (collatz.compareTo(BigInteger.ONE) > 0) {
              if (collatz.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {
@@ -37,10 +39,10 @@
                      peak = collatz;
                  }
              }
-             CCExtras.writeToFile(collatzFile, "Step " + ++steps + ": " + collatz + "\n", true);
+             CCExtras.writeToFile(COLLATZ_FILE, "Step " + ++steps + ": " + collatz + "\n", true);
          }
          
-         System.out.println(start + " reached 1 in " + steps + " steps\nIts peak was " + peak + "\n\nThe full path is in a file named \"Java-CollatzFile.txt\"");
-         CCExtras.writeToFile(collatzFile, start + " reached 1 in " + steps + " steps\nIts peak was " + peak, true);
+         System.out.println(START + " reached 1 in " + steps + " steps\nIts peak was " + peak + "\n\nThe full path is in a file named \"Java-CollatzFile.txt\"");
+         CCExtras.writeToFile(COLLATZ_FILE, START + " reached 1 in " + steps + " steps\nIts peak was " + peak, true);
      }
  }

@@ -1,7 +1,5 @@
-import cc_extras
-
-cc_extras.clear()
-collatz = peak = steps = 0
+print("\x1b[H\x1b[2J", end="", flush=True)
+collatz = steps = 0
 
 with open("Python-CollatzFile.txt", "w") as file:
     while True:

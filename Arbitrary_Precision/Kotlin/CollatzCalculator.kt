@@ -1,9 +1,8 @@
 import java.math.BigInteger;
 
 fun main() {
-    clear();
+    print("\u001b[H\u001b[2J");
     var collatz = BigInteger.ZERO;
-    var peak = collatz;
     var steps = 0;
     val collatzFile = "Kotlin-CollatzFile.txt";
     
@@ -18,7 +17,7 @@ fun main() {
         }
     } while (collatz < BigInteger.ONE);
     val start = collatz;
-    peak = collatz;
+    var peak = start;
     writeToFile(collatzFile, "Start: $start\n", false);
     
     while (collatz > BigInteger.ONE) {

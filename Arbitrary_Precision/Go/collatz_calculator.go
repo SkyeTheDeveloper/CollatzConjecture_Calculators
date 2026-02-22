@@ -6,15 +6,13 @@ import (
 )
 
 func main() {
-	Clear()
+	fmt.Print("\033[H\033[2J")
 	one := big.NewInt(1)
 	two := big.NewInt(2)
 	three := big.NewInt(3)
 	collatz := big.NewInt(0)
-	start := big.NewInt(0)
-	peak := new(big.Int).Set(collatz)
 	steps := 0
-	const collatzFile = "Go-CollatzFile.txt"
+	const CollatzFile = "Go-CollatzFile.txt"
 	
 	for ok := true; ok; ok = (collatz.Cmp(one) <= 0) {
 		var input string
@@ -30,9 +28,9 @@ func main() {
 			fmt.Println("The Collatz Conjecture has strange and emergent behavior with numbers below 1")
 		}
 	}
-	start.Set(collatz)
-	peak.Set(collatz)
-	WriteToFile(collatzFile, fmt.Sprintf("Start: %s\n", start), false)
+	start := collatz
+	peak := start
+	WriteToFile(CollatzFile, fmt.Sprintf("Start: %s\n", start), false)
 	
 	temp := new(big.Int)
 	for ok := true; ok; ok = (collatz.Cmp(one) > 0) {
@@ -47,9 +45,9 @@ func main() {
 			}
 		}
 		steps += 1
-		WriteToFile(collatzFile, fmt.Sprintf("Step %d: %s\n", steps, collatz), true)
+		WriteToFile(CollatzFile, fmt.Sprintf("Step %d: %s\n", steps, collatz), true)
 	}
 	
 	fmt.Printf("%s reached 1 in %d steps\nIts peak was %s\n\nFull path is in the file named \"Go-CollatzFile.txt\"\n", start, steps, peak)
-	WriteToFile(collatzFile, fmt.Sprintf("%s reached 1 in %d steps\nIts peak was %s", start, steps, peak), true)
+	WriteToFile(CollatzFile, fmt.Sprintf("%s reached 1 in %d steps\nIts peak was %s", start, steps, peak), true)
 }

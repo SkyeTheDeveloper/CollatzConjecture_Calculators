@@ -2,8 +2,8 @@
 
 int main()
 {
-    clear();
-    uint64_t collatz, peak;
+    printf("\x1b[H\x1b[2J");
+    uint64_t collatz;
     int steps = 0;
     FILE *collatz_file;
     collatz_file = fopen("C-CollatzFile.txt", "w");
@@ -23,16 +23,17 @@ int main()
             collatz = 0;
         }
     } while (collatz < 1);
-    const uint64_t start = peak = collatz;
-    fprintf(collatz_file, "Start: %lu\n", start);
+    const uint64_t START = collatz;
+    uint64_t peak = START;
+    fprintf(collatz_file, "Start: %lu\n", START);
 
     while (collatz > 1) {
         if (collatz % 2 == 0) {
             collatz /= 2;
         } else {
             if (collatz > (ULLONG_MAX - 1) / 3) {
-                printf("%lu overflowed on step %i\nExiting...\n\n", start, ++steps);
-                fprintf(collatz_file, "%lu overflowed on step %i\nProgram exited with error: ULong Integer Overflow", start, steps);
+                printf("%lu overflowed on step %i\nExiting...\n\n", START, ++steps);
+                fprintf(collatz_file, "%lu overflowed on step %i\nProgram exited with error: ULong Integer Overflow", START, steps);
                 fclose(collatz_file);
                 return EXIT_FAILURE;
             } else {
@@ -45,8 +46,8 @@ int main()
         fprintf(collatz_file, "Step %i: %lu\n", ++steps, collatz);
     }
 
-    printf("%lu reached 1 in %i steps\nIts peak was %lu\n\nFull path is in the file named \"C-CollatzFile.txt\"\n", start, steps, peak);
-    fprintf(collatz_file, "%lu reached 1 in %i steps\nIts peak was %lu", start, steps, peak);
+    printf("%lu reached 1 in %i steps\nIts peak was %lu\n\nFull path is in the file named \"C-CollatzFile.txt\"\n", START, steps, peak);
+    fprintf(collatz_file, "%lu reached 1 in %i steps\nIts peak was %lu", START, steps, peak);
 
     fclose(collatz_file);
     return EXIT_SUCCESS;

@@ -2,9 +2,9 @@
 
 require_relative 'cc_extras'
 
-CCExtras.clear
+print "\x1b[H\x1b[2J"
 collatz = steps = 0
-collatz_file = 'Ruby-CollatzFile.txt'
+COLLATZ_FILE = 'Ruby-CollatzFile.txt'
 
 loop do
   print 'What number would you like to run through the Collatz Conjecture: '
@@ -16,9 +16,9 @@ loop do
   end
   next
 end
-peak = collatz
-start = collatz.freeze
-CCExtras.write_to_file collatz_file, "Start: #{start}\n", false
+START = collatz.freeze
+peak = START
+CCExtras.write_to_file COLLATZ_FILE, "Start: #{START}\n", false
 
 while collatz > 1
   if collatz.even?
@@ -27,10 +27,10 @@ while collatz > 1
     collatz = collatz * 3 + 1
     peak = collatz if collatz > peak
   end
-  CCExtras.write_to_file collatz_file, "Step #{steps += 1}: #{collatz}\n", true
+  CCExtras.write_to_file COLLATZ_FILE, "Step #{steps += 1}: #{collatz}\n", true
 end
 
-puts "#{start} reached 1 in #{steps} steps\
+puts "#{START} reached 1 in #{steps} steps\
 \nIts peak was #{peak}\
 \n\nFull path is in the file named \"Ruby-CollatzFile.txt\"\n"
-CCExtras.write_to_file collatz_file, "#{start} reached 1 in #{steps} steps\nIts peak was #{peak}", true
+CCExtras.write_to_file COLLATZ_FILE, "#{START} reached 1 in #{steps} steps\nIts peak was #{peak}", true
