@@ -26,16 +26,17 @@ arbitrary precision integer arithmetic techniques..
 ## Implementations Included
 
 ### Non-Arbitrary Precision Implementations:
-- **C Implementation**: Uses native uint64_t datatype with overflow checking
-- **BASH Implementation**: Uses native 64-bit signed integers with overflow checking
+- **BASH**: Uses native 64-bit signed integers with overflow checking
+- **C**: Uses native uint64_t datatype with overflow checking
+- **Rust**: Uses native u64 datatype with overflow checking
 
 ### Arbitrary Precision Implementations:
-- **C# Implementation**: Uses native BigInteger library
-- **Go Implementation**: Uses native math/big library
-- **Java Implementation**: Uses native BigInteger library
-- **Kotlin Implementation**: Uses Java's BigInteger library
-- **Python Implementation**: Uses native int datatype
-- **Ruby Implementation**: Uses native integer datatype
+- **C#**: Uses native BigInteger library
+- **Go**: Uses native math/big library
+- **Java**: Uses native BigInteger library
+- **Kotlin**: Uses Java's BigInteger library
+- **Python**: Uses native int datatype
+- **Ruby**: Uses native integer datatype
 
 ## Third-Party Components
 
