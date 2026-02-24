@@ -57,7 +57,7 @@ namespace CollatzCalculator
                 CCExtras.WriteToFile(collatzFile, $"Step {steps}: {collatz}\n", true);
             }
 
-            Console.WriteLine($"{start} reached 1 in {steps} steps\nIts peak was {peak}\n\nFull path is in the file named \"CSharp-CollatzFile.txt\"");
+            Console.WriteLine($"{start} reached 1 in {steps} steps\nIts peak was {peak}\n\nFull path is in the file named \"{collatzFile}\"");
             CCExtras.WriteToFile(collatzFile, $"{start} reached 1 in {steps} steps\nIts peak was {peak}", true);
         }
     }

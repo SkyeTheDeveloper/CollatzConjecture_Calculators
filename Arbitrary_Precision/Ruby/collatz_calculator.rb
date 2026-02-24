@@ -32,5 +32,5 @@ end
 
 puts "#{START} reached 1 in #{steps} steps\
 \nIts peak was #{peak}\
-\n\nFull path is in the file named \"Ruby-CollatzFile.txt\"\n"
+\n\nFull path is in the file named \"#{COLLATZ_FILE}\"\n"
 CCExtras.write_to_file COLLATZ_FILE, "#{START} reached 1 in #{steps} steps\nIts peak was #{peak}", true

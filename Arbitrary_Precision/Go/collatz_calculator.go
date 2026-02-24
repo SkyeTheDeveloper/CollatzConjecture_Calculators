@@ -48,6 +48,6 @@ func main() {
 		WriteToFile(CollatzFile, fmt.Sprintf("Step %d: %s\n", steps, collatz), true)
 	}
 	
-	fmt.Printf("%s reached 1 in %d steps\nIts peak was %s\n\nFull path is in the file named \"Go-CollatzFile.txt\"\n", start, steps, peak)
+	fmt.Printf("%s reached 1 in %d steps\nIts peak was %s\n\nFull path is in the file named \"%s\"\n", start, steps, peak, CollatzFile)
 	WriteToFile(CollatzFile, fmt.Sprintf("%s reached 1 in %d steps\nIts peak was %s", start, steps, peak), true)
 }

@@ -1,7 +1,8 @@
 print("\x1b[H\x1b[2J", end="", flush=True)
 collatz = steps = 0
+collatz_file = "Python-CollatzFile.txt"
 
-with open("Python-CollatzFile.txt", "w") as file:
+with open(collatz_file, "w") as file:
     while True:
         collatz = int(input("What number would you like to run through the Collatz Conjecture: "))
         if collatz < 1:
@@ -22,5 +23,5 @@ with open("Python-CollatzFile.txt", "w") as file:
         steps += 1
         file.write(f"Step {steps}: {collatz}\n")
     
-    print(f"{start} reached 1 in {steps} steps\nIts peak was {peak}\n\nFull path is in the file named \"Python-CollatzFile.txt\"\n")
+    print(f"{start} reached 1 in {steps} steps\nIts peak was {peak}\n\nFull path is in the file named \"{collatz_file}\"\n")
     file.write(f"{start} reached 1 in {steps} steps\nIts peak was {peak}")

@@ -41,5 +41,5 @@ while (( collatz > 1 )); do
     echo "Step $((++steps)): $collatz" >> "$COLLATZ_FILE"
 done
     
-echo -e "$START reached 1 in $steps steps\nIts peak was $peak\n\nFull path is in the file \"Shell-CollatzFile.txt\""
+echo -e "$START reached 1 in $steps steps\nIts peak was $peak\n\nFull path is in the file \"$COLLATZ_FILE\""
 echo -n -e "$START reached 1 in $steps steps\nIts peak was $peak" >> "$COLLATZ_FILE"

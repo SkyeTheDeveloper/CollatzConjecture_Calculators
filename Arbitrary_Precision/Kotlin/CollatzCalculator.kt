@@ -32,6 +32,6 @@ fun main() {
         writeToFile(collatzFile, "Step ${++steps}: $collatz \n", true);
     }
     
-    println("$start reached 1 in $steps steps\nIts peak was $peak\n\nThe full path is in a file named \"Kotlin-CollatzFile.txt\"");
+    println("$start reached 1 in $steps steps\nIts peak was $peak\n\nThe full path is in a file named \"$collatzFile\"");
     writeToFile(collatzFile, "$start reached 1 in $steps steps\nIts peak was $peak", true);
 }

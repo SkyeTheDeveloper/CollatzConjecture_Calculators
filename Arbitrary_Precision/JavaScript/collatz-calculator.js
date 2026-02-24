@@ -40,5 +40,5 @@ while (collatz > 1) {
   writeToFile(COLLATZ_FILE, `Step ${steps}: ${collatz}\n`, true);
 }
 
-console.log(`${START} reached 1 in ${steps} steps\nIts peak was ${peak}\n\nFull path is in the file named "JavaScript-CollatzFile.txt"`);
+console.log(`${START} reached 1 in ${steps} steps\nIts peak was ${peak}\n\nFull path is in the file named "${COLLATZ_FILE}"`);
 writeToFile(COLLATZ_FILE, `${START} reached 1 in ${steps} steps\nIts peak was ${peak}`, true);

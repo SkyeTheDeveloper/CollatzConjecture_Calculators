@@ -42,7 +42,7 @@
              CCExtras.writeToFile(COLLATZ_FILE, "Step " + ++steps + ": " + collatz + "\n", true);
          }
          
-         System.out.println(START + " reached 1 in " + steps + " steps\nIts peak was " + peak + "\n\nThe full path is in a file named \"Java-CollatzFile.txt\"");
+         System.out.println(START + " reached 1 in " + steps + " steps\nIts peak was " + peak + "\n\nThe full path is in a file named \"" + COLLATZ_FILE + "\"");
          CCExtras.writeToFile(COLLATZ_FILE, START + " reached 1 in " + steps + " steps\nIts peak was " + peak, true);
      }
  }
