@@ -34,6 +34,7 @@ arbitrary precision integer arithmetic techniques..
 - **C#**: Uses native BigInteger library
 - **Go**: Uses native math/big library
 - **Java**: Uses native BigInteger library
+- **JavaScript**: Uses native bigint datatype
 - **Kotlin**: Uses Java's BigInteger library
 - **Python**: Uses native int datatype
 - **Ruby**: Uses native integer datatype
