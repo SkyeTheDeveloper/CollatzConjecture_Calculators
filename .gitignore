@@ -1,2 +1,6 @@
 NonArbitrary_Precision/Rust/target/
 Arbitrary_Precision/CSharp/obj/
+node_modules/
+package-lock.json
+*.tsbuildinfo
+.zed/
