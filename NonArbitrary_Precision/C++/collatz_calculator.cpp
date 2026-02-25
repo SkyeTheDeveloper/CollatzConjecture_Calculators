@@ -1,4 +1,8 @@
-#include "collatz_calculator.h"
+#include <cstdio>
+#include <cstdlib>
+#include <cstdint>
+#include <cinttypes>
+#include <climits>
 
 int main()
 {
