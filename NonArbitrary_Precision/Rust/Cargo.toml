@@ -2,6 +2,3 @@
 name = "CollatzConjectureCalculator"
 version = "1.2.0"
 edition = "2024"
-
-[dependencies]
-io = "0.0.2"
