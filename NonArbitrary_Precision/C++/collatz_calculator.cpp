@@ -1,5 +1,4 @@
-#include "collatz_calculator.hpp"
-#include <cinttypes>
+#include "collatz_calculator.h"
 
 int main()
 {
