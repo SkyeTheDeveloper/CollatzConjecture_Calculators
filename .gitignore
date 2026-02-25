@@ -4,3 +4,8 @@ node_modules/
 package-lock.json
 *.tsbuildinfo
 .zed/
+NonArbitrary_Precision/C/build
+NonArbitrary_Precision/C++/build
+Arbitrary_Precision/Go/build
+Arbitrary_Precision/Java/build
+Arbitrary_Precision/Kotlin/build
