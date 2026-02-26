@@ -5,6 +5,7 @@ node_modules/
 package-lock.json
 *.tsbuildinfo
 .zed/
+.github/
 NonArbitrary_Precision/C/build
 NonArbitrary_Precision/C++/build
 Arbitrary_Precision/CSharp/build
