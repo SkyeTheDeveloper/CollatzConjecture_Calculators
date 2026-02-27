@@ -12,7 +12,7 @@ namespace CollatzCalculator
         {
             Console.Clear();
             BigInteger collatz = 0;
-            int steps = 0;
+            BigInteger steps = 0;
             const string collatzFile = "CSharp-CollatzFile.txt";
 
             do
@@ -26,9 +26,16 @@ namespace CollatzCalculator
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine($"ERR: Input is not a number");
+                    Console.WriteLine("ERR: Input is not a number");
+                    Environment.Exit(1);
                 }
-
+                
+                if (collatz < 0)
+                {
+                    Console.WriteLine("ERR: Input is not a positive number");
+                    Environment.Exit(1);
+                }
+                
                 if (collatz < 1)
                 {
                     Console.WriteLine("The Collatz Conjecture has strange and emergent behavior with numbers less than 1 and non-integers.");
@@ -41,6 +48,7 @@ namespace CollatzCalculator
 
             while (collatz > 1)
             {
+                steps++;
                 if (collatz % 2 == 0)
                 {
                     collatz /= 2;
@@ -53,7 +61,6 @@ namespace CollatzCalculator
                         peak = collatz;
                     }
                 }
-                steps++;
                 CCExtras.WriteToFile(collatzFile, $"Step {steps}: {collatz}\n", true);
             }
 

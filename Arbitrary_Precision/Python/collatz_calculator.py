@@ -1,12 +1,12 @@
 print("\x1b[H\x1b[2J", end="", flush=True)
-collatz = steps = 0
+collatz = 0
+steps = 0
 collatz_file = "Python-CollatzFile.txt"
 
 with open(collatz_file, "w") as file:
     while True:
         collatz = int(input("What number would you like to run through the Collatz Conjecture: "))
         if collatz < 1:
-            collatz = 0
             print("The Collatz Conjecture has strange and emergent behavior with numbers less than 1")
         else:
             break

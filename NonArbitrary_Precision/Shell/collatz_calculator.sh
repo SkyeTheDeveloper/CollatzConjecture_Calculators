@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 clear
 readonly MAX_INT=$((2**63 - 1))
-collatz=0
+declare collatz
 steps=0
 readonly COLLATZ_FILE="Shell-CollatzFile.txt"
 
 while true; do
-    echo -n "What number would you like to run through the Collatz Conjecture: "
-    read collatz
+    printf 'What number would you like to run through the Collatz Conjecture: '
+    read -r collatz
     if [[ ! "$collatz" =~ ^[+-]?[0-9]+$ ]]; then
         echo "ERR: Input is not a number"
         exit 1
@@ -25,11 +25,12 @@ peak=$collatz
 echo "Start: $START" > "$COLLATZ_FILE"
 
 while (( collatz > 1 )); do
+    ((steps++))
     if (( collatz % 2 == 0 )); then
         ((collatz /= 2))
     else
         if (( collatz > (MAX_INT - 1) / 3 )); then
-            echo -e "$START overflowed on step $((++steps))\nExiting..."
+            printf '%s overflowed on step %s\nExiting...\n' "$START" "$steps"
             exit 1
         else
             ((collatz=collatz * 3 + 1))
@@ -38,8 +39,8 @@ while (( collatz > 1 )); do
             fi
         fi
     fi
-    echo "Step $((++steps)): $collatz" >> "$COLLATZ_FILE"
+    echo "Step $steps: $collatz" >> "$COLLATZ_FILE"
 done
-    
-echo -e "$START reached 1 in $steps steps\nIts peak was $peak\n\nFull path is in the file \"$COLLATZ_FILE\""
-echo -n -e "$START reached 1 in $steps steps\nIts peak was $peak" >> "$COLLATZ_FILE"
+
+printf '%s reached 1 in %s steps\nIts peak was %s\n\nFull path is in the file "%s"\n' "$START" "$steps" "$peak" "$COLLATZ_FILE"
+printf '%s reached 1 in %s steps\nIts peak was %s' "$START" "$steps" "$peak" >> "$COLLATZ_FILE"

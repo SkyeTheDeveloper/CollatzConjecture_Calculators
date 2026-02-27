@@ -10,8 +10,8 @@
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   },
-  "include": ["*.ts", "*.mts"],
-  "exclude": ["node_modules"]
+  "include": ["src/*.ts", "src/*.mts"],
+  "exclude": ["node_modules"],
 }

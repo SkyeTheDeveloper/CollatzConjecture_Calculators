@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/big"
+	"os"
 )
 
 func main() {
@@ -12,9 +13,9 @@ func main() {
 	three := big.NewInt(3)
 	collatz := big.NewInt(0)
 	steps := 0
-	const CollatzFile = "Go-CollatzFile.txt"
+	const collatzFile = "Go-CollatzFile.txt"
 	
-	for ok := true; ok; ok = (collatz.Cmp(one) <= 0) {
+	for {
 		var input string
 		fmt.Print("What number would you like to run through the Collatz Conjecture: ")
 		_, err := fmt.Scanln(&input)
@@ -22,20 +23,24 @@ func main() {
 			fmt.Println("Error reading input:", err)
         	return
 		}
-		collatz.SetString(input, 10)
+		if _, ok := collatz.SetString(input, 10); !ok {
+		    fmt.Println("ERR: Input is not a number")
+		    os.Exit(1)
+		}
+
 		
 		if (collatz.Cmp(one) < 0) {
 			fmt.Println("The Collatz Conjecture has strange and emergent behavior with numbers below 1")
 		}
+		if collatz.Cmp(one) >= 0 { break }
 	}
-	start := collatz
-	peak := start
-	WriteToFile(CollatzFile, fmt.Sprintf("Start: %s\n", start), false)
+	start := new(big.Int).Set(collatz)
+	peak := new(big.Int).Set(start)
+	WriteToFile(collatzFile, fmt.Sprintf("Start: %s\n", start), false)
 	
-	temp := new(big.Int)
-	for ok := true; ok; ok = (collatz.Cmp(one) > 0) {
-		temp.Mod(collatz, two)
-		if (temp.Cmp(one) < 0) {
+	for collatz.Cmp(one) > 0 {
+		steps++
+		if collatz.Bit(0) == 0 {
 			collatz.Div(collatz, two)
 		} else {
 			collatz.Mul(collatz, three)
@@ -44,10 +49,9 @@ func main() {
 				peak.Set(collatz)
 			}
 		}
-		steps += 1
-		WriteToFile(CollatzFile, fmt.Sprintf("Step %d: %s\n", steps, collatz), true)
+		WriteToFile(collatzFile, fmt.Sprintf("Step %d: %s\n", steps, collatz), true)
 	}
 	
-	fmt.Printf("%s reached 1 in %d steps\nIts peak was %s\n\nFull path is in the file named \"%s\"\n", start, steps, peak, CollatzFile)
-	WriteToFile(CollatzFile, fmt.Sprintf("%s reached 1 in %d steps\nIts peak was %s", start, steps, peak), true)
+	fmt.Printf("%s reached 1 in %d steps\nIts peak was %s\n\nFull path is in the file named \"%s\"\n", start, steps, peak, collatzFile)
+	WriteToFile(collatzFile, fmt.Sprintf("%s reached 1 in %d steps\nIts peak was %s", start, steps, peak), true)
 }

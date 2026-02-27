@@ -6,28 +6,27 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-console.log("\x1b[H\x1b[2J");
+process.stdout.write("\x1b[H\x1b[2J");
 let collatz = 0n;
 let steps = 0;
 const COLLATZ_FILE = "JavaScript-CollatzFile.txt";
 
 do {
   const answer = await rl.question('What number would you like to run through the Collatz Conjecture: ');
-  if (answer < 1) {
+  collatz = BigInt(answer);
+  if (collatz < 1n) {
     console.log("The Collatz Conjecture has strage and emergent behavior with numbers less than one.\nTry again...");
     collatz = 0n;
-  } else {
-    collatz = BigInt(answer);
   }
 } while (collatz < 1n);
 rl.close();
 
-rl.close();
 const START = collatz;
 let peak = START;
 writeToFile(COLLATZ_FILE, `Start: ${START}\n`, false);
 
-while (collatz > 1) {
+while (collatz > 1n) {
+  steps++;
   if (collatz % 2n === 0n) {
     collatz /= 2n;
   } else {
@@ -36,7 +35,6 @@ while (collatz > 1) {
       peak = collatz;
     }
   }
-  steps++;
   writeToFile(COLLATZ_FILE, `Step ${steps}: ${collatz}\n`, true);
 }
 
