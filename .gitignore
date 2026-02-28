@@ -1,3 +1,5 @@
+build/
+
 NonArbitrary_Precision/Rust/target/
 Arbitrary_Precision/CSharp/obj/
 Arbitrary_Precision/CSharp/bin
@@ -6,9 +8,3 @@ package-lock.json
 *.tsbuildinfo
 .zed/
 .github/
-NonArbitrary_Precision/C/build
-NonArbitrary_Precision/C++/build
-Arbitrary_Precision/CSharp/build
-Arbitrary_Precision/Go/build
-Arbitrary_Precision/Java/build
-Arbitrary_Precision/Kotlin/build
