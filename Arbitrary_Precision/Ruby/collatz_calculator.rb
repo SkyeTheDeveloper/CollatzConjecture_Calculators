@@ -9,7 +9,6 @@
 # of the Mozilla Public License, v. 2.0, in which case the provisions of
 # the MPL are applicable instead of those above.
 
-
 # frozen_string_literal: true
 
 require_relative 'cc_extras'

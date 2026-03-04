@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>

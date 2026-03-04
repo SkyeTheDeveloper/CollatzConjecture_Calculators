@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 import fs from 'node:fs';
 
 

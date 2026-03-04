@@ -9,7 +9,6 @@
 # of the Mozilla Public License, v. 2.0, in which case the provisions of
 # the MPL are applicable instead of those above.
 
-
 print("\x1b[H\x1b[2J", end="", flush=True)
 collatz = 0
 steps = 0

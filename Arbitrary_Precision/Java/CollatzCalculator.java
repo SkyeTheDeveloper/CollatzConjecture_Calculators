@@ -10,7 +10,6 @@
   * of the Mozilla Public License, v. 2.0, in which case the provisions of
   * the MPL are applicable instead of those above.
   */
-
  
 import java.util.Scanner;
 import java.nio.file.Path;

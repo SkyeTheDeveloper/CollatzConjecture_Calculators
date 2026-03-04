@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

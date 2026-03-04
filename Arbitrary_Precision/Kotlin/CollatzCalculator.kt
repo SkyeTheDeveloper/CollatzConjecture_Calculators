@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 import java.math.BigInteger
 
 fun main() {

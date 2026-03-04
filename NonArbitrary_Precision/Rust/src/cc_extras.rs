@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 use std::fs;
 use std::fs::OpenOptions;
 use std::io;

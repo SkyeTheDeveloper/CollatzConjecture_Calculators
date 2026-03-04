@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 import readline from "node:readline/promises";
 import { writeToFile } from "./cc-extras.mjs";
 

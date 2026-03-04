@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 import * as fs from "node:fs";
 
 export function writeToFile(filePath: string, text: string, append: boolean) {

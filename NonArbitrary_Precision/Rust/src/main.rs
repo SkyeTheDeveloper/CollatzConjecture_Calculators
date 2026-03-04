@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 mod cc_extras;
 
 use cc_extras::write_to_file;

@@ -11,7 +11,6 @@
  * the MPL are applicable instead of those above.
  */
 
-
 import java.io.File
 
 fun writeToFile(path: String, text: String, append: Boolean) {
