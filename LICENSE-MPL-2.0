@@ -20,33 +20,23 @@ Mozilla Public License Version 2.0
     the notice in Exhibit A, the Executable Form of such Source Code
     Form, and Modifications of such Source Code Form, in each case
     including portions thereof.
-
-1.5. "Incompatible With Secondary Licenses"
-    means
-
-    (a) that the initial Contributor has attached the notice described
-        in Exhibit B to the Covered Software; or
-
-    (b) that the Covered Software was made available under the terms of
-        version 1.1 or earlier of the License, but not also under the
-        terms of a Secondary License.
-
-1.6. "Executable Form"
+    
+1.5. "Executable Form"
     means any form of the work other than Source Code Form.
 
-1.7. "Larger Work"
+1.6. "Larger Work"
     means a work that combines Covered Software with other material, in
     a separate file or files, that is not Covered Software.
 
-1.8. "License"
+1.7. "License"
     means this document.
 
-1.9. "Licensable"
+1.8. "Licensable"
     means having the right to grant, to the maximum extent possible,
     whether at the time of the initial grant or subsequently, any and
     all of the rights conveyed by this License.
 
-1.10. "Modifications"
+1.9. "Modifications"
     means any of the following:
 
     (a) any file in Source Code Form that results from an addition to,
@@ -56,7 +46,7 @@ Mozilla Public License Version 2.0
     (b) any new file in Source Code Form that contains any Covered
         Software.
 
-1.11. "Patent Claims" of a Contributor
+1.10. "Patent Claims" of a Contributor
     means any patent claim(s), including without limitation, method,
     process, and apparatus claims, in any patent Licensable by such
     Contributor that would be infringed, but for the grant of the
@@ -64,16 +54,16 @@ Mozilla Public License Version 2.0
     made, import, or transfer of either its Contributions or its
     Contributor Version.
 
-1.12. "Secondary License"
+1.11. "Secondary License"
     means either the GNU General Public License, Version 2.0, the GNU
     Lesser General Public License, Version 2.1, the GNU Affero General
     Public License, Version 3.0, or any later versions of those
     licenses.
 
-1.13. "Source Code Form"
+1.12. "Source Code Form"
     means the form of the work preferred for making modifications.
 
-1.14. "You" (or "Your")
+1.13. "You" (or "Your")
     means an individual or a legal entity exercising rights under this
     License. For legal entities, "You" includes any entity that
     controls, is controlled by, or is under common control with You. For
@@ -345,13 +335,6 @@ modified version of this License if you rename the license and remove
 any references to the name of the license steward (except to note that
 such modified license differs from this License).
 
-10.4. Distributing Source Code Form that is Incompatible With Secondary
-Licenses
-
-If You choose to distribute Source Code Form that is Incompatible With
-Secondary Licenses under the terms of this version of the License, the
-notice described in Exhibit B of this License must be attached.
-
 Exhibit A - Source Code Form License Notice
 -------------------------------------------
 
@@ -366,8 +349,4 @@ for such a notice.
 
 You may add additional accurate notices of copyright ownership.
 
-Exhibit B - "Incompatible With Secondary Licenses" Notice
----------------------------------------------------------
-
-  This Source Code Form is "Incompatible With Secondary Licenses", as
-  defined by the Mozilla Public License, v. 2.0.
+Copyright 2026 Skylar Koningin
