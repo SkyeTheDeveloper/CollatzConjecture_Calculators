@@ -11,9 +11,6 @@
 //
 // Copyright 2026 Skylar Koningin
 
-#pragma warning disable IDE0130
-
-using System;
 using System.Numerics;
 using CollatzCalculatorExtras;
 

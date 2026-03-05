@@ -11,10 +11,6 @@
 //
 // Copyright 2026 Skylar Koningin
 
-#pragma warning disable IDE0130
-
-using System.IO;
-
 namespace CollatzCalculatorExtras
 {
     public class CCExtras
