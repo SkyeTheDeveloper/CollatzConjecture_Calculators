@@ -17,7 +17,7 @@
 package_exists() {
   command -v "$1" >/dev/null 2>&1
 }
-dependencies=("zig" "dotnet" "go" "java" "kotlin" "cargo")
+dependencies=("clang" "dotnet" "go" "java" "kotlin" "codon" "cargo")
 missing_dependencies=0
 declare -a missing
 for dependency in "${dependencies[@]}"; do
@@ -41,12 +41,12 @@ done
 cd ..
 
 # C Compilation
-zig cc -o build/C/C-CollatzCalculator NonArbitrary_Precision/C/*.c
+clang -o build/C/C-CollatzCalculator NonArbitrary_Precision/C/*.c
 cd build/C/
 cd ../..
 
 # CPlusPlus Compilation
-zig c++ -o build/CPlusPlus/CPlusPlus-CollatzCalculator NonArbitrary_Precision/CPlusPlus/*.cpp
+clang++ -o build/CPlusPlus/CPlusPlus-CollatzCalculator NonArbitrary_Precision/CPlusPlus/*.cpp
 cd build/CPlusPlus/
 cd ../..
 
