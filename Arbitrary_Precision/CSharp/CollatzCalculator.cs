@@ -1,7 +1,7 @@
 ﻿// SPDX-License-Identifier: Apache-2.0 OR LGPL-3.0-or-later
 //
 // This Source Code Form is subject to the terms of the Apache License,
-// v. 2.0, or the GNU Lesser General Public License, v. 3.0 or later.
+// v. 2.0.
 // If a copy of the Apache License was not distributed with this file,
 // You can obtain one at http://www.apache.org/licenses/LICENSE-2.0.
 //
