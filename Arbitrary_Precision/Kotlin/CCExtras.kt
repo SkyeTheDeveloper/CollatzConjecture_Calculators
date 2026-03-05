@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 import java.io.File
 
 fun writeToFile(path: String, text: String, append: Boolean) {

@@ -13,8 +13,7 @@
  *
  * Copyright 2026 Skylar Koningin
  */
-
-
+ 
 import * as fs from "node:fs";
 
 export function writeToFile(filePath: string, text: string, append: boolean) {

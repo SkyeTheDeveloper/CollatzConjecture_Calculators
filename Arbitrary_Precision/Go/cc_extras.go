@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 package main
 
 import (

@@ -12,7 +12,6 @@
 #
 # Copyright 2026 Skylar Koningin
 
-
 print("\x1b[H\x1b[2J", end="", flush=True)
 collatz = 0
 steps = 0

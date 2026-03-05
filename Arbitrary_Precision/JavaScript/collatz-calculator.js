@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 import readline from 'node:readline/promises';
 import { writeToFile } from './cc-extras.mjs';
 

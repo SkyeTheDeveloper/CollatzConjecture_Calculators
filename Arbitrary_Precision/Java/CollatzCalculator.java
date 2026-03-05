@@ -13,7 +13,6 @@
  *
  * Copyright 2026 Skylar Koningin
  */
-
  
 import java.util.Scanner;
 import java.nio.file.Path;

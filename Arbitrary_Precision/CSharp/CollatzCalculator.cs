@@ -12,7 +12,6 @@
 //
 // Copyright 2026 Skylar Koningin
 
-
 using System.Numerics;
 using CollatzCalculatorExtras;
 

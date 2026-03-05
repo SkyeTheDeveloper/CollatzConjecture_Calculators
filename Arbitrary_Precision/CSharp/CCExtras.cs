@@ -12,7 +12,6 @@
 //
 // Copyright 2026 Skylar Koningin
 
-
 namespace CollatzCalculatorExtras
 {
     public class CCExtras

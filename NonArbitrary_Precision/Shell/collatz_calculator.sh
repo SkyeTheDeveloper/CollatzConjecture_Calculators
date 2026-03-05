@@ -14,7 +14,6 @@
 #
 # Copyright 2026 Skylar Koningin
 
-
 clear
 readonly MAX_INT=$((2**63 - 1))
 declare collatz

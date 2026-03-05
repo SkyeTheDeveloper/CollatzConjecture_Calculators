@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 use std::fs;
 use std::fs::OpenOptions;
 use std::io;

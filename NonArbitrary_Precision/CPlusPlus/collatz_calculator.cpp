@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 #include <iostream>
 #include <fstream>
 #include <cstdlib>

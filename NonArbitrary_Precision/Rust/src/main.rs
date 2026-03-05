@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 mod cc_extras;
 
 use cc_extras::write_to_file;

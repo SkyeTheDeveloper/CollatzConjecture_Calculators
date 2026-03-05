@@ -12,7 +12,6 @@
 #
 # Copyright 2026 Skylar Koningin
 
-
 # frozen_string_literal: true
 
 require_relative 'cc_extras'

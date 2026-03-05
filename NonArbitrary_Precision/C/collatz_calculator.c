@@ -14,7 +14,6 @@
  * Copyright 2026 Skylar Koningin
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
