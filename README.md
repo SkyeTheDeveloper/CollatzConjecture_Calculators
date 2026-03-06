@@ -20,3 +20,6 @@ arbitrary precision integer arithmetic techniques..
 - **Python**: Uses native int datatype
 - **Ruby**: Uses native integer datatype
 - **TypeScript**: Uses native bigint datatype
+
+# NOTICE
+The Creative Commons 0 License (`LICENSE-CC0`) only applies to the file `build.sh`. All other files are under your choice of Apache 2.0 or LGPL 3.0.
