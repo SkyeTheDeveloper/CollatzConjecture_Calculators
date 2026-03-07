@@ -27,7 +27,7 @@ for dependency in "${dependencies[@]}"; do
     fi
 done
 if [[ "$missing_dependencies" == 1 ]]; then
-    printf "You are missing " && printf "%s, " "${missing[@]}" && printf "packages, please install them"
+    printf "You are missing " && printf "%s, " "${missing[@]}" && printf "please install all missing packages."
     exit 1
 fi
 
