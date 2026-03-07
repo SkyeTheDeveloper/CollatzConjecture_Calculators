@@ -17,7 +17,7 @@
 package_exists() {
   command -v "$1" >/dev/null 2>&1
 }
-dependencies=("clang" "dotnet" "go" "java" "kotlin" "codon" "cargo")
+dependencies=("clang" "dotnet" "go" "java" "kotlin" "cargo")
 missing_dependencies=0
 declare -a missing
 for dependency in "${dependencies[@]}"; do
