@@ -6,10 +6,11 @@ arbitrary precision integer arithmetic techniques..
 ## Implementations Included
 
 ### Non-Arbitrary Precision Implementations:
+- **Bash**: Uses native 64-bit signed integers with overflow checking
 - **C**: Uses native uint64_t datatype with overflow checking
-- **C++**: Uses native uint64_tdatatype with overflow checking
+- **C++**: Uses native uint64_t datatype with overflow checking
+- **Fortran**: Uses iso_c_binding to add C's int64_t datatype with overflow checking
 - **Rust**: Uses native u64 datatype with overflow checking
-- **Shell**: Uses Bash for scripting and its native 64-bit signed integers with overflow checking
 
 ### Arbitrary Precision Implementations:
 - **C#**: Uses native BigInteger library

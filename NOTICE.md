@@ -38,9 +38,10 @@ arbitrary precision integer arithmetic techniques.
 ## Implementations Included
 
 ### Non-Arbitrary Precision Implementations:
-- **BASH**: Uses native 64-bit signed integers with overflow checking
+- **Bash**: Uses native 64-bit signed integers with overflow checking
 - **C**: Uses native uint64_t datatype with overflow checking
 - **C++**: Uses native uint64_t datatype with overflow checking
+- **Fortran**: Uses iso_c_binding to add C's int64_t datatype with overflow checking
 - **Rust**: Uses native u64 datatype with overflow checking
 
 ### Arbitrary Precision Implementations:
