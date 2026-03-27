@@ -17,7 +17,7 @@
 package_exists() {
   command -v "$1" >/dev/null 2>&1
 }
-dependencies=("clang" "dotnet" "go" "java" "kotlin" "cargo")
+dependencies=("clang" "dotnet" "flang" "go" "java" "kotlin" "cargo")
 missing_dependencies=0
 declare -a missing
 for dependency in "${dependencies[@]}"; do
@@ -35,19 +35,22 @@ fi
 mkdir -p build
 cd build
 rm -rf ./*
-for name in C CPlusPlus CSharp Go Java JavaScript Kotlin Python Ruby Rust Shell TypeScript; do
+for name in Bash C CXX CSharp Fortran Go Java JavaScript Kotlin Python Ruby Rust TypeScript; do
     mkdir -p "$name"
 done
 cd ..
 
+# Bash Compilation
+cp NonArbitrary_Precision/Bash/collatz_calculator.sh build/Bash
+
 # C Compilation
-clang -o build/C/C-CollatzCalculator NonArbitrary_Precision/C/*.c
-cd build/C/
+cd NonArbitrary_Precision/C
+clang -o ../../build/C/C-CollatzCalculator *.c
 cd ../..
 
-# CPlusPlus Compilation
-clang++ -o build/CPlusPlus/CPlusPlus-CollatzCalculator NonArbitrary_Precision/CPlusPlus/*.cpp
-cd build/CPlusPlus/
+# C++ Compilation
+cd NonArbitrary_Precision/CXX
+clang++ -o ../../build/CXX/CXX-CollatzCalculator *.cpp
 cd ../..
 
 # CSharp Compilation
@@ -56,6 +59,11 @@ dotnet publish --sc -o ../../build/CSharp -p:PublishSingleFile=true
 rm -r bin obj
 cd ../../build/CSharp
 rm *.pdb
+cd ../..
+
+#Fortran Compilation
+cd NonArbitrary_Precision/Fortran
+flang -o ../../build/Fortran/Fortran-CollatzCalculator *.f95
 cd ../..
 
 # Go Compilation
@@ -91,9 +99,6 @@ cargo build --release
 cd target/release
 cp Rust-CollatzCalculator ../../../../build/Rust
 cd ../../../..
-
-# Shell Compilation
-cp NonArbitrary_Precision/Shell/collatz_calculator.sh build/Shell
 
 # TypeScript Compilation
 cp Arbitrary_Precision/TypeScript/src/collatz-calculator.ts Arbitrary_Precision/TypeScript/src/cc-extras.mts build/TypeScript
